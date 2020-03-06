@@ -1,6 +1,5 @@
 import pymongo, json
 
-
 def getConfig(configitem):
     with open('py/config.json', 'r') as f:
         config = json.load(f)
@@ -14,7 +13,6 @@ def dbConnection(dbcollectionname):
     db = client[dbname]
     dbcollection = db[dbcollectionname]
     return dbcollection
-
 
 def saveData(dbcollectionname, data):
     dbcollection = dbConnection(dbcollectionname)
